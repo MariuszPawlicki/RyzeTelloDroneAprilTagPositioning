@@ -1,0 +1,16 @@
+focalLength    = [4*720/3 4*960/4];   % te dane trzeba zmienić
+principalPoint = [360 480];
+imageSize      = [720 960];
+intrinsics = cameraIntrinsics(focalLength , principalPoint , imageSize);
+actionDistance=0.5; %w metrach
+actionDistanceAccuracy=0.01; %w metrach
+actionRotationAccuracy=0.02; %w radianach
+
+tagSize = 0.184;    %wielkosc krawedzi tagu
+isthereatag = zeros(1,19);  % id tagow, bez tagu o id = 0
+canigo = ones(1,19);        % czy moze leciec do tagu
+kordytagow = [0 0 0];   % 1 - x; 2 - y; 3 - z | tak jak na wykresie czyli
+pozdrona = [0 0 0];     % prawo lewo; przod tyl; wysokosc
+tagwzglkam
+stop = 0;       %jesli stop==1 to konczy głowną pętlę
+amiontag = 0;   %czy dron jest wlasnie przed tagiem
